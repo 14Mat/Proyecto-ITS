@@ -1,17 +1,26 @@
 body {
     margin: 0;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #e20f0f;
     font-family: Arial, sans-serif;
+    overflow: hidden; /* Oculta las barras de desplazamiento */
+}
+video{
+    position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100vw; /* Asegura que el video ocupe todo el ancho de la ventana */
+            height: 100vh; /* Asegura que el video ocupe toda la altura de la ventana */
+            object-fit: cover; /* Hace que el video cubra completamente el área sin deformarse */
+            z-index: -1; /* Envía el video detrás del contenido */
 }
 nav {
-    background-color: #ffffff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    padding: 20px 30px;
+            position: relative;
+            z-index: 1; /* Asegura que el menú esté por encima del video */
+            background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 20px 30px;
 }
 ul {
     list-style: none;
