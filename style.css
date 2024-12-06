@@ -1,43 +1,49 @@
 body {
-    margin: 0;
-    height: 100vh;
-    font-family: Arial, sans-serif;
-    overflow: hidden; /* Oculta las barras de desplazamiento */
-}
-video{
-    position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 100vw; /* Asegura que el video ocupe todo el ancho de la ventana */
-            height: 100vh; /* Asegura que el video ocupe toda la altura de la ventana */
-            object-fit: cover; /* Hace que el video cubra completamente el área sin deformarse */
-            z-index: -1; /* Envía el video detrás del contenido */
-}
-nav {
-            position: relative;
-            z-index: 1; /* Asegura que el menú esté por encima del video */
-            background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background-color: black;
+        }
+       
+        video {
+            position: fixed;
+            width: 95%;
+            height: auto;
+            object-fit: cover; /* Ajusta el video para cubrir el área */
+            position: absolute;
+            border: 30px solid rgba(0,0,0,0.2);
+          
+        }
+        nav {
+            position: absolute;
+            align-items: center;
+            top: 20px;
+            transform: translateX(-50%);
+            background-color: rgba(255, 255, 255, 0.9); /* Fondo semitransparente */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para resaltar el menú */
             border-radius: 8px;
-            padding: 20px 30px;
-}
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 20px;
-}
-ul li {
-    display: inline;
-}
-ul li a {
-    text-decoration: none;
-    color: #333;
-    font-size: 18px;
-    transition: color 0.3s;
-}
-ul li a:hover {
-    color: #007BFF;
-}
+            padding: 20px 702px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 15px;
+
+        }
+        ul li {
+            display: inline;
+        }
+        ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        ul li a:hover {
+            color: #007BFF;
+        }
