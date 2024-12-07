@@ -1,49 +1,105 @@
 body {
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: Arial, sans-serif;
-            background-color: black;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    overflow: hidden; /* Evita desplazamientos */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0c0a0a;
         }
-       
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
         video {
             position: fixed;
             width: 95%;
             height: auto;
             object-fit: cover; /* Ajusta el video para cubrir el área */
             position: absolute;
-            border: 30px solid rgba(0,0,0,0.2);
+            border: 60px solid rgba(0,0,0,0.2);
           
         }
+
         nav {
-            position: absolute;
-            align-items: center;
-            top: 20px;
-            transform: translateX(-50%);
+            width: 90%; /* Mismo ancho que las cards */
+            max-width: 1200px;
             background-color: rgba(255, 255, 255, 0.9); /* Fondo semitransparente */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para resaltar el menú */
+            padding: 10px 20px;
             border-radius: 8px;
-            padding: 20px 703px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            text-align: center;
         }
-        ul {
+        nav ul {
             list-style: none;
             padding: 0;
             margin: 0;
             display: flex;
-            gap: 15px;
-
+            justify-content: center;
+            gap: 20px;
         }
-        ul li {
+        nav ul li {
             display: inline;
         }
-        ul li a {
+        nav ul li a {
             text-decoration: none;
             color: #333;
-            font-size: 16px;
+            font-size: 18px;
             transition: color 0.3s;
         }
-        ul li a:hover {
+        nav ul li a:hover {
+            color: #007BFF;
+        }
+        .products {
+            position: relative;
+            z-index: 1; /* Asegura que los productos estén sobre el video */
+            width: 90%; /* Mismo ancho que el menú */
+            max-width: 1200px;
+            margin: 20px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .product-card {
+            z-index: 1;
+            width: 100px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .product-card img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        .product-info {
+            padding: 15px;
+        }
+        .product-info h3 {
+            margin: 10px 0;
+            font-size: 18px;
+            color: #333;
+        }
+        .product-info p {
+            font-size: 14px;
+            color: #666;
+        }
+        .product-info .price {
+            font-size: 16px;
+            font-weight: bold;
             color: #007BFF;
         }
