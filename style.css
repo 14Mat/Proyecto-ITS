@@ -180,3 +180,31 @@ footer {
 .social-icon:hover img {
     transform: scale(1.1);
 }
+
+/* Sección a la derecha */
+.kkaos-right {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    text-align: left;
+}
+
+.kkaos-section {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+}
+
+.kkaos-section h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.kkaos-section p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
