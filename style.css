@@ -138,6 +138,7 @@ video {
     /* Asegura que el botón esté sobre todo */
 }
 
+
 .whatsapp-button img {
     width: 40px;
     height: 40px;
@@ -181,7 +182,7 @@ footer {
     transform: scale(1.1);
 }
 
-/* Sección a la derecha */
+/* Section a la derecha */
 .kkaos-right {
     position: absolute;
     top: 50%;
@@ -190,6 +191,7 @@ footer {
     text-align: left;
 }
 
+/*Dando forma al section*/
 .kkaos-section {
     background-color: rgba(255, 255, 255, 0.9);
     color: #333;
