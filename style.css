@@ -217,6 +217,67 @@ footer {
     line-height: 1.6;
 }
 
+/* Section en la derecha */
+.right-section {
+    position: absolute;
+    /* Permite posicionar libremente el section */
+    right: 0;
+    /* Alinea a la derecha */
+    top: 50%;
+    /* Centra verticalmente */
+    transform: translateY(-50%);
+    /* Ajusta el centro vertical exacto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    /* Opcional: controla el ancho del section */
+    padding: 20px;
+}
+
+/* Contenedor para imagen e información */
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    /* Espaciado entre imagen y texto */
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Fondo blanco semitransparente */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    /* Sombra para resaltar */
+}
+
+/* Imagen */
+.section-image {
+    width: 150px;
+    /* Ajusta el tamaño según prefieras */
+    height: auto;
+    /* Mantiene proporción */
+    border-radius: 8px;
+    object-fit: cover;
+    /* Asegura que la imagen siempre se vea bien */
+}
+
+/* Información textual */
+.info {
+    max-width: 300px;
+    /* Controla el ancho del texto */
+}
+
+.info h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.info p {
+    margin: 10px 0 0;
+    font-size: 1rem;
+    color: #555;
+}
+
 .left-section {
     position: absolute;
     top: 50%;
