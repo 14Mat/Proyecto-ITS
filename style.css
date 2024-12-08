@@ -7,12 +7,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     /* Asegura que todo ocupe el 100% de la altura */
-    background-color: black;
-}
-#map{
-    margin-top: 8%;
-    height: 500px;
-    width: 30%;
+    background-color: #333
 }
 
 .brand-intro {
@@ -156,12 +151,16 @@ video {
     transition: background-color 0.3s;
 }
 
+#map{
+    height: 400px;
+    width: 50%;
+}
 /* Footer */
 footer {
     background-color: #333;
     color: white;
-    text-align: center;
-    padding: 10px 0;
+    padding: 20px;
+    align-items: center;
     height: 50px;
     /* Altura del footer */
     position: relative;
@@ -170,6 +169,7 @@ footer {
     margin-top: auto;
     /* Empuja el footer al final de la página */
 }
+
 
 .social-media {
     display: flex;
