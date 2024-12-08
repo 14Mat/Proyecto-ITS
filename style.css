@@ -199,7 +199,7 @@ footer {
 
 /*Dando forma al section*/
 .kkaos-section {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: #FFD700;
     color: #333;
     padding: 30px;
     border-radius: 15px;
@@ -215,4 +215,23 @@ footer {
 .kkaos-section p {
     font-size: 1.2em;
     line-height: 1.6;
+}
+
+.left-section {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 20%;
+    /* Ajusta el ancho según tu preferencia */
+    background-color: #FFD700;
+    /* Fondo semitransparente */
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Sombra para destacar */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    font-family: Arial, sans-serif;
+    text-align: center;
+    /* Centrar texto */
 }
