@@ -9,6 +9,12 @@ body {
     /* Asegura que todo ocupe el 100% de la altura */
     background-color: black;
 }
+#map{
+    margin-top: 8%;
+    height: 500px;
+    width: 30%;
+}
+
 .brand-intro {
     background: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
     color: white; /* Texto blanco para contraste */
