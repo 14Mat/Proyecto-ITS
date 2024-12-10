@@ -10,3 +10,9 @@ function iniciarMap() {
       map: map
     });
 }
+
+const modal = document.querySelector('.left-section');
+
+modal.addEventListener('click', function() {
+    modal.classList.toggle('flip'); // Alternar el estado de giro
+});

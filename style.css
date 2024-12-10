@@ -278,21 +278,84 @@ footer {
     color: #555;
 }
 
+/* Contenedor del modal */
 .left-section {
     position: absolute;
     top: 50%;
     left: 0;
     transform: translateY(-50%);
-    width: 20%;
-    /* Ajusta el ancho según tu preferencia */
-    background-color: #FFD700;
-    /* Fondo semitransparente */
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    /* Sombra para destacar */
+    /* Centrado vertical */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    /* Ancho ajustable */
+    height: 200px;
+    /* Alto ajustable */
+    perspective: 1000px;
+    /* Habilitar perspectiva para el efecto 3D */
+    margin: 20px;
+    /* Márgenes alrededor */
+    border: 1px solid #ccc;
+    /* Borde */
     border-radius: 10px;
     /* Bordes redondeados */
-    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    /* Fondo */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Sombra */
+    cursor: pointer;
+    /* Cambiar cursor al pasar */
+}
+
+/* Contenedor del contenido del modal */
+.modal-content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    /* Habilitar contenido 3D dentro */
+    transition: transform 0.8s;
+    /* Transición suave */
+}
+
+/* Front del modal */
+.modal-front,
+.modal-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    /* Ocultar la parte trasera */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    /* Centrar texto */
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+/* Estilo para la cara frontal */
+.modal-front {
+    background-color: #007bff;
+    /* Fondo azul */
+    color: white;
+    /* Texto blanco */
+}
+
+/* Estilo para la cara trasera */
+.modal-back {
+    background-color: #ff5722;
+    /* Fondo naranja */
+    color: white;
+    /* Texto blanco */
+    transform: rotateY(180deg);
+    /* Rotar la cara trasera */
+}
+
+/* Estilo cuando el modal está girado */
+.left-section.flip .modal-content {
+    transform: rotateY(180deg);
+    /* Girar el contenido */
 }
